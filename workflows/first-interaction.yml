@@ -1,0 +1,13 @@
+name: First interaction
+description: Greet new contributors when they create their first issue or open their first pull request
+author: Somos NLP
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1.1.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: Acabas de crear tu primer issue, ¡felicidades! Muchas gracias por tu contribución 🤩
+          pr-message: Acabas de crear tu primera PR, ¡felicidades! Muchas gracias por tu contribución 🤩
